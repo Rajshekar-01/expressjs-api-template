@@ -43,7 +43,6 @@ const create = async (req = request, res = response) => {
             data
         })
     } catch (error) {
-        console.log(error);
         res.status(500).json({
             status: 'Internal Server Error',
             data: {error}
