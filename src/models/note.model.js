@@ -23,7 +23,8 @@ module.exports = {
     updateById: async (id, data) => await prisma[target].update({where: {id}, data}),
 
     CreateSchema: z.object({
+        id: z.string().min(1).max(255).optional(),
         title: z.string().min(1).max(255).optional(),
-        desc: z.string().min(0).max(255).optional()
+        description: z.string().min(0).max(255).optional()
     }).strip(),
 }
